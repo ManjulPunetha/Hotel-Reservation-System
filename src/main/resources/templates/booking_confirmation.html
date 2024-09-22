@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/styles.css}" rel="stylesheet"></link>
+<meta charset="ISO-8859-1">
+<title>Book Hotel</title>
+</head>
+<body>
+<form th:action="@{/navUserRegisterPage}"  method="GET">
+	<table class='visibleTable'>
+		<tr>
+			<th>Room Type</th>
+			<th>Price</th>
+			<th>GST</th>
+			<th>Total</th>
+		</tr>
+		<tr>
+			
+			<td th:text="${hotelRoom_Type}"/>
+			<td th:text="${hotel_price}"/>
+			<td th:text="${hotel_gst}"/>
+			<td th:text="${total}"/>
+		</tr>
+	</table>
+	        <button type="submit">Confirm</button>
+</form>
+		<form action="/index" method="get">
+        <button type="submit">Back</button></form>
+</body>
+</html>

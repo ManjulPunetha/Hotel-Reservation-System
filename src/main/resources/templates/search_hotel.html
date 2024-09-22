@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link th:href="@{/styles.css}" rel="stylesheet"></link>
+<title>Search Hotel</title>
+</head>
+<body>
+	<h2>Hotel Reservation System</h2>
+	<div class="formBox">
+	<p class='underlinedBold'>Search Hotels</p>
+	<form th:action="@{/availabilityResult}" th:object = "${searchObject}" method="POST">
+		<table>
+			<tr>
+				<td>City</td>
+				<td><select th:field="*{city}">
+	         	<option th:each="i : ${cityList}" th:value="${i}" th:text="${i}"/>
+	        	</select></td>
+			</tr>
+			<tr>
+				<td>Hotel</td>
+				<td><select th:field="*{hotel}">
+	         	<option th:each="j : ${hotelList}" th:value="${j}" th:text="${j}"/>
+	        	</select></td>
+			</tr>
+			<tr>
+				<td>Date</td>
+				<td><input type="date" th:field="*{date}"/></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Check Availability</button></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>

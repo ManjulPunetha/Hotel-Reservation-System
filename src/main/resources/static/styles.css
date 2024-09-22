@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+
+body
+{
+	background-color: #e0e0eb;
+}
+
+h2
+{
+	font-weight: bold;
+}
+
+.formBox
+{
+	border: 2px solid green;
+	width : 450px;
+	padding-top:5px;
+	padding-bottom:25px;
+	padding-left:25px;
+}
+
+td
+{
+	padding: 10px;
+}
+
+p.underlinedBold
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+table.visibleTable tr,table.visibleTable td,table.visibleTable,table.visibleTable th
+{
+	border:solid black;
+	border-collapse: collapse;
+	padding:10px;
+}
+
+table.visibleTable
+{
+	width: 550px;
+}
+
+
+

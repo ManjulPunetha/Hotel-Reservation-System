@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/styles.css}" rel="stylesheet"></link>
+<meta charset="ISO-8859-1">
+<title>Register User</title>
+</head>
+<body>
+	<p class='underlinedBold'>Reservation Form</p>
+	<div class="formBox">
+		<form th:action="@{/reserveUser}" th:object = "${userObj}" method="POST">
+		<table>
+			<tr>
+				<td>Guest Name</td>
+				<td><input type="text" th:field="*{guest_name}"/></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><select th:field="*{gender}">
+		          <option th:value="'F'" th:text="Female"  th:selected="${gender == 'F'}"></option>
+		          <option th:value="'M'" th:text="Male"  th:selected="${gender == 'M'}"></option>
+		        </select></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" th:field="*{age}"/></td>
+			</tr>
+			<tr>
+				<td>Email ID</td>
+				<td><input type="email" th:field="*{email}"/></td>
+			</tr>
+			<tr>
+				<td>Mobile number</td>
+				<td><input type="number" th:field="*{mobileNumber}"/></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Reserve</button></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+	</body>
+</html>

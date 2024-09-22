@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/styles.css}" rel="stylesheet"></link>
+<meta charset="ISO-8859-1">
+<title>Booking Confirmed</title>
+</head>
+<body>
+<p th:text="${hotelName}"></p><br>
+<p>Dear <span th:text="${userName}"></span>, Thank you for choosing <span th:text="${hotelName}"></span>.</p>
+<p>It is our pleasure to confirm your reservation</p>
+</body>
+</html>
